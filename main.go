@@ -35,7 +35,7 @@ func main() {
 	router.PanicHandler = exception.ErrorHandler
 
 	server := http.Server{
-		Addr:    "localhost:3000",
+		Addr:    ":3000",
 		Handler: middleware.NewAuthMiddleware(router),
 	}
 	err := server.ListenAndServe()

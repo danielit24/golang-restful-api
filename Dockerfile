@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.16-alpine
+FROM golang:1.18-alpine
 
 WORKDIR /app
 
@@ -12,4 +12,4 @@ COPY . .
 
 RUN go build -o /golang-restful-api
 
-CMD [ "./golang-restful-api" ]
+CMD [ "/golang-restful-api" ]
